@@ -5,29 +5,27 @@ using namespace std;
 
 int main()
 {
-    int a,b,c,D;
-    int x1,x2;
+    double a,b,c,D;
+    double x1,x2;
     cout << "Enter A ";
     cin >> a;
     cout << "Enter B ";
     cin >> b;
     cout << "Enter C ";
     cin >> c;
-    D = b^2 - 4 * a * c;
-    if(D > 0){
-         x1 = ((-b) + sqrt(D)) / (2 * a);
-      cout << "x1= " << x1 << endl;
-       x2 = ((-b) - sqrt(D)) / (2 * a);
-      cout << "x2= "<< x2 << endl;
+    D = b * b - 4 * a * c;
+    if (D > 0)
+    {
+        x1 = ((-b) + sqrt(D)) / (2 * a);
+        x2 = ((-b) - sqrt(D)) / (2 * a);
+        cout << "x1 = " << x1 << "\n";
+        cout << "x2 = " << x2 << "\n";
     }
-
-    if(D < 0){
-        cout << "No radical!";
-    }
-
-    if (D == 0){
+    if (D == 0)
+    {
       x1 = -(b / (2 * a));
-      cout << "x1= " << x1 << endl;
+      cout << "x1 = x2 = " << x1 << "\n";
+    } else {
+        cout << "D < 0, no roots!";
     }
-    return 0;
 }
